@@ -12,10 +12,10 @@
                                 {{ $post->title }}
                                 <br>
                                 <p class="text-sm text-gray-600 dark:text-gray-400" style="margin-top: -6px">
-                                    Status: {{ $post->status }}
+                                    Статус: {{ $post->status }}
                                 </p>
                                 <p class="text-sm text-gray-600 dark:text-gray-400" style="margin-top: -6px">
-                                    Locale:
+                                    Город:
                                     @foreach($post->locales as $locale)
                                         {{ $locale->place }}
                                     @endforeach

@@ -25,12 +25,12 @@
         @if (Route::has('login'))
             <div class="hidden fixed top-0 right-0 px-6 py-4 sm:block">
                 @auth
-                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Dashboard</a>
+                    <a href="{{ url('/dashboard') }}" class="text-sm text-gray-700 underline">Аккаунт</a>
                 @else
-                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Log in</a>
+                    <a href="{{ route('login') }}" class="text-sm text-gray-700 underline">Войти</a>
 
                     @if (Route::has('register'))
-                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Register</a>
+                        <a href="{{ route('register') }}" class="ml-4 text-sm text-gray-700 underline">Регистрация</a>
                     @endif
                 @endauth
             </div>
@@ -39,31 +39,31 @@
         <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <a href="{{ route('all') }}">
-                    <h1 class="text-gray-600 dark:text-gray-400">All news</h1>
+                    <h1 class="text-gray-600 dark:text-gray-400">Все новости</h1>
                 </a>
             </div>
 
             <div class="flex justify-center pt-8 sm:justify-start sm:pt-0">
                 <a href="/">
-                    <h1 class="text-gray-600 dark:text-gray-400">Favorite news</h1>
+                    <h1 class="text-gray-600 dark:text-gray-400">Избранные новости</h1>
                 </a>
             </div>
 
             <form method="get" action="{{ route('welcome') }}" class="input-group mb-3">
                 <div class="flex">
                     <input type="text" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-                           placeholder="What are you looking for?" aria-label="Username" id="search" name="search"
+                           placeholder="Что вы ищите?" aria-label="Username" id="search" name="search"
                            aria-describedby="basic-addon1">
 
                     <button type="submit" class="shadow appearance-none border ml-2 rounded w-20 h-9 text-center py-2 px-3 text-gray-700
                             leading-tight focus:outline-none focus:shadow-outline bg-blue-200">
-                        Search
+                        Искать
                     </button>
 
                     <a href="/">
                         <button type="submit" class="ml-4 shadow appearance-none border rounded w-20 h-9 text-center py-2 px-3 text-gray-700
                             leading-tight focus:outline-none focus:shadow-outline bg-red-200">
-                            Refresh
+                            Сброс
                         </button>
                     </a>
                 </div>

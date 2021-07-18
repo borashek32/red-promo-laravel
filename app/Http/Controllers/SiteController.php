@@ -18,7 +18,7 @@ class SiteController extends Controller
                 ->orWhere('title', 'LIKE', "%{$search}%")
                 ->paginate(6);
         } else {
-            $posts = Post::where('status', 'favorite')->paginate(6);
+            $posts = Post::where('status', 'избранная')->paginate(6);
             $posts->withPath('/');
         }
 
@@ -29,12 +29,13 @@ class SiteController extends Controller
     {
         $post = Post::where('id', $id)->first();
         $similarity = $post->title;
-        $similarPosts = Post::where('title', 'LIKE', "%{$similarity}%")
+
+        $posts = Post::where('body', 'LIKE', "%{$similarity}%")
             ->orWhere('description', 'LIKE', "%{$similarity}%")
-            ->orWhere('body', 'LIKE', "%{$similarity}%")
+            ->orWhere('title', '!==', "%{$similarity}%")
             ->get();
 
-        return view('post', compact('post', 'similarPosts'));
+        return view('post', compact('post', 'similarity', 'posts'));
     }
 
     public function all()

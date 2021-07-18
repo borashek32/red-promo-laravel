@@ -16,10 +16,10 @@ class LocaleSeeder extends Seeder
     {
         DB::table('locales')->insert([
             [
-                'place' => 'Moscow'
+                'place' => 'Москва'
             ],
             [
-                'place' => 'Paris'
+                'place' => 'Санкт-Петербург'
             ]
         ]);
     }

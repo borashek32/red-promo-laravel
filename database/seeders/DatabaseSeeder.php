@@ -16,7 +16,8 @@ class DatabaseSeeder extends Seeder
         $this->call(UserSeeder::class);
         $this->call(LocaleSeeder::class);
         $this->call(RoleSeeder::class);
-        \App\Models\Post::factory(10)->create();
-        \App\Models\LocalePost::factory(10)->create();
+        $this->call(PostSeeder::class);
+        $this->call(LocalePostSeeder::class);
+//        \App\Models\LocalePost::factory(10)->create();
     }
 }

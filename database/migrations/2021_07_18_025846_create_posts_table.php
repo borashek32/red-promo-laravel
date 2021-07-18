@@ -17,10 +17,9 @@ class CreatePostsTable extends Migration
             $table->id();
             $table->string('title', 40);
             $table->string('description', 200);
-            $table->string('body', 500);
+            $table->string('body', 1000);
             $table->string('img');
-            $table->enum('status', ['favorite', 'ordinary']);
-            $table->foreignId('locale_id')->constrained()->onDelete('cascade');
+            $table->enum('status', ['избранная', 'обычная']);
             $table->timestamps();
         });
     }

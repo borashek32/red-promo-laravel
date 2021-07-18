@@ -17,11 +17,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [\App\Http\Controllers\SiteController::class, 'welcome'])->name('welcome');
 Route::get('/news/{id}', [\App\Http\Controllers\SiteController::class, 'post'])->name('post');
 Route::get('/all-news', [\App\Http\Controllers\SiteController::class, 'all'])->name('all');
-Route::post('/add-to-favorites', [\App\Http\Controllers\SiteController::class, 'add'])->name('add');
+Route::post('/add-to-favorites', [\App\Http\Controllers\SiteController::class, 'add'])->name('add')
+    ->middleware('auth');
 Route::get('/local-news/{id}', [\App\Http\Controllers\SiteController::class, 'locale'])->name('locale');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     $user  = Auth::user();
     $posts = $user->posts;
-    return view('dashboard', compact('posts'));
+    return view('profile.favorites', compact('posts'));
 })->name('dashboard');

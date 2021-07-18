@@ -7,6 +7,7 @@
                 <div class="flex-shrink-0 flex items-center">
                     <a href="/">
                         <x-jet-application-mark class="block h-9 w-auto" />
+                        <p>На главную</p>
                     </a>
                 </div>
 

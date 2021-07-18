@@ -61,7 +61,7 @@ class SiteController extends Controller
             'post_id' => $request->post_id
         ]);
 
-        return redirect()->back()->with('success', 'Post was successfully added to favorites');
+        return redirect()->back()->with('success', 'Новость добавлена в ваши избранные новости');
     }
 
     public function locale($id)

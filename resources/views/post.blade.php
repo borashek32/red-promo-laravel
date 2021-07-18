@@ -36,7 +36,7 @@
         </div>
     </div>
 
-    <p class="text-gray-600 mt-8">Similar news</p>
+    <p class="text-gray-600 mt-8">Похожие новости</p>
 
     <div class="bg-white dark:bg-gray-800 overflow-hidden shadow sm:rounded-lg">
         <div class="grid grid-cols-1 md:grid-cols-1">

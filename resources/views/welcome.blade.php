@@ -33,7 +33,7 @@
                 </div>
             @empty
                 <p class="text-center" style="margin-left: 6px">
-                    We can not find anything, like <strong>{{ request()->query('search') }}</strong>
+                    Поиск не дал результатов по запросу <strong>{{ request()->query('search') }}</strong>
                 </p>
             @endforelse
         </div>
